@@ -1,0 +1,30 @@
+{
+  "name": "json-html",
+  "version": "0.0.1",
+  "description": "A simple JSON to HTML parser",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codejockie/json-html.git"
+  },
+  "keywords": [
+    "json",
+    "html",
+    "json-html",
+    "json-2-html",
+    "json-to-html",
+    "jsonhtml",
+    "json2html",
+    "jsontohtml",
+    "jsonparser"
+  ],
+  "author": "John C. Kennedy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codejockie/json-html/issues"
+  },
+  "homepage": "https://github.com/codejockie/json-html#readme"
+}
