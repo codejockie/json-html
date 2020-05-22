@@ -84,7 +84,6 @@ typings/
 README.md
 jest.config.json
 test/
-*.tgz
 .travis.yml
 src/
 examples/
