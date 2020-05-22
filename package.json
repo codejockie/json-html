@@ -3,8 +3,11 @@
   "version": "0.0.1",
   "description": "A simple JSON to HTML parser",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "tsc",
+    "prepare": "npm run compile && npm test",
+    "test": "jest --config=jest.config.json && codecov"
   },
   "repository": {
     "type": "git",
@@ -26,5 +29,14 @@
   "bugs": {
     "url": "https://github.com/codejockie/json-html/issues"
   },
-  "homepage": "https://github.com/codejockie/json-html#readme"
+  "homepage": "https://github.com/codejockie/json-html#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.5",
+    "codecov": "^3.7.0",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.3"
+  }
 }
