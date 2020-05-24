@@ -1,0 +1,50 @@
+{
+  "_type": "Element",
+  "name": "div",
+  "children": [
+    {
+      "_type": "Element",
+      "name": "img",
+      "attributes": [
+        {
+          "name": "alt",
+          "value": "thumbnail"
+        },
+        {
+          "name": "src",
+          "value": "https://via.placeholder.com/150/92c952"
+        }
+      ]
+    },
+    {
+      "_type": "Element",
+      "name": "input",
+      "attributes": [
+        {
+          "name": "type",
+          "value": "email"
+        },
+        {
+          "name": "placeholder",
+          "value": "Enter email"
+        }
+      ]
+    },
+    {
+      "_type": "Element",
+      "name": "a",
+      "attributes": [
+        {
+          "name": "href",
+          "value": "http://example.com"
+        }
+      ],
+      "children": [
+        {
+          "_type": "Characters",
+          "data": "Click here"
+        }
+      ]
+    }
+  ]
+}
