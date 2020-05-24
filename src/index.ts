@@ -6,26 +6,29 @@ interface Attribute {
 }
 
 interface JsonChild {
-  _type: string
+  _type?: string
   attributes?: Attribute[]
   data?: string
   type?: string
 }
 
 interface Json {
-  _type: string
-  attributes: Attribute[]
+  _type?: string
+  attributes?: Attribute[]
   children: Json[] | JsonChild[]
   elements?: Json[] | JsonChild[]
   name: string
   type?: string
 }
 
-function toHtmlAttributes(attributes: Attribute[]) {
+function toHtmlAttributes(attributes: Attribute[] | undefined) {
+  if (!attributes) {
+    return ""
+  }
   return attributes.map((attr: any) => `${attr.name}="${attr.value}"`).join(" ")
 }
 
-function toHtmlTag(name: string, children: any[], attr: string | Attribute[]) {
+function toHtmlTag(name: string, children: any[], attr: string | Attribute[] | undefined) {
   const attributes = (Array.isArray(attr) ? ` ${toHtmlAttributes(attr)}` : attr && ` ${attr}`) || ""
   if (SELF_CLOSING_TAGS.includes(name)) {
     return `<${name}${attributes} />`
