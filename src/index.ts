@@ -22,10 +22,7 @@ interface Json {
 }
 
 function toHtmlAttributes(attributes: Attribute[] | undefined) {
-  if (!attributes) {
-    return ""
-  }
-  return attributes.map((attr: any) => `${attr.name}="${attr.value}"`).join(" ")
+  return attributes?.map((attr: any) => `${attr.name}="${attr.value}"`).join(" ")
 }
 
 function toHtmlTag(name: string, children: any[], attr: string | Attribute[] | undefined) {
@@ -39,16 +36,15 @@ function toHtmlTag(name: string, children: any[], attr: string | Attribute[] | u
 function arrayToHtml(array: Json[]): string {
   return array.map((a: Json) => {
     const type = a.type || a._type
-    const children = a.elements || a.children
-
+    
+    // NB: ATM we have just two types: Element or Characters
     if (type == "Element") {
+      const children = a.elements || a.children
       return toHtmlTag(a.name, children, a.attributes)
     }
 
-    if (type == "Characters") {
-      return (a as JsonChild).data
-    }
-  }).join("")
+    return (a as JsonChild).data
+  }).filter(Boolean).join("")
 }
 
 export default function jsonToHtml(rootItem: Json): string {

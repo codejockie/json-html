@@ -10,6 +10,9 @@ describe("jsonToHtml", () => {
   test("given a JSON argument it produces HTML markup", () => {
     expect(jsonToHtml(json)).toEqual(markup)
     expect(jsonToHtml(json2)).toEqual(markup2)
+
+    // Using format() to format json
+    expect(jsonToHtml(format(json))).toEqual(markup)
   })
 })
 
