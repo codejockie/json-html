@@ -1,6 +1,9 @@
 # json-html
 A simple JSON to HTML parser
 
+[![Build Status](https://travis-ci.com/codejockie/json-html.svg?branch=master)](https://travis-ci.com/codejockie/json-html)
+[![codecov](https://codecov.io/gh/codejockie/json-html/branch/master/graph/badge.svg)](https://codecov.io/gh/codejockie/json-html)
+
 ## API
 `jsonToHtml` - function that converts a JSON data to HTML
 
