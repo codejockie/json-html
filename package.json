@@ -1,5 +1,5 @@
 {
-  "name": "json-html",
+  "name": "@codejockie/json-html",
   "version": "0.0.1",
   "description": "A simple JSON to HTML parser",
   "main": "dist/index.js",
