@@ -1,8 +1,11 @@
 # json-html
-A simple JSON to HTML parser
 
 [![Build Status](https://travis-ci.com/codejockie/json-html.svg?branch=master)](https://travis-ci.com/codejockie/json-html)
 [![codecov](https://codecov.io/gh/codejockie/json-html/branch/master/graph/badge.svg)](https://codecov.io/gh/codejockie/json-html)
+![npm](https://img.shields.io/npm/v/@codejockie/json-html)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/@codejockie/json-html)
+
+A simple JSON to HTML parser
 
 ## API
 `jsonToHtml` - function that converts a JSON data to HTML
@@ -61,14 +64,20 @@ Given the following JSON file structure
   ]
 }
 ```
+```ts
+import jsonToHtml from "@codejockie/json-html"
 
+jsonToHtml(jsonData)
 
-Call to `jsonToHtml` passing the above JSON file as an argument will result in the following markup being generated.
-```html
+// Output
+/*
 <div>
   <img alt="thumbnail" src="https://via.placeholder.com/150/92c952" />
   <input type="email" placeholder="Enter email" />
   <a href="http://example.com">Click here</a>
 </div>
+*/
 ```
 > JSON data must be in the format given above with one root element
+
+If you are using ES5, the import statement is: `const jsonToHtml = require("@codejockie/json-html").default`
