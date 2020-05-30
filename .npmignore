@@ -85,6 +85,5 @@ README.md
 jest.config.json
 test/
 .travis.yml
-src/
+dist/examples/
 examples/
-tsconfig.json
