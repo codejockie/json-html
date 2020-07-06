@@ -80,4 +80,11 @@ jsonToHtml(jsonData)
 ```
 > JSON data must be in the format given above with one root element
 
-If you are using ES5, the import statement is: `const jsonToHtml = require("@codejockie/json-html").default`
+If you are using ES5, the import statement is:
+```
+const jsonToHtml = require("@codejockie/json-html").default
+
+// or
+
+const { default: jsonToHtml } = require("@codejockie/json-html")
+```
