@@ -2,8 +2,8 @@
   "name": "@codejockie/json-html",
   "version": "0.0.1",
   "description": "A simple JSON to HTML parser",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "compile": "tsc",
     "prepare": "npm run compile && npm test",

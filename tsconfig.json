@@ -6,7 +6,7 @@
     "resolveJsonModule": true,
     "lib": ["es2017", "es7", "es6", "dom"],                             /* Specify library files to be included in the compilation. */
     "declaration": true,                   /* Generates corresponding '.d.ts' file. */
-    "outDir": "dist",                        /* Redirect output structure to the directory. */
+    "outDir": "lib",                        /* Redirect output structure to the directory. */
 
     /* Strict Type-Checking Options */
     "strict": true,                           /* Enable all strict type-checking options. */
@@ -15,5 +15,5 @@
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
   },
-  "exclude": ["node_modules", "dist", "examples", "test"]
+  "exclude": ["node_modules", "lib", "examples", "test"]
 }

@@ -85,5 +85,5 @@ README.md
 jest.config.json
 test/
 .travis.yml
-dist/examples/
+lib/examples/
 examples/
